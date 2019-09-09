@@ -17,7 +17,7 @@ stages:
 jobs:
   include:
     # stage="test" if no stage is specified
-    - script: sbt +test:compile +test
+    - script: sbt publishSigned
     # run ci-release only if previous stages passed
     - stage: release
       script: sbt ci-release
